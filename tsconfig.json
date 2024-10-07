@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "esnext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "allowJs": true,
     "checkJs": true,
@@ -12,15 +12,14 @@
     "strictPropertyInitialization": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitThis": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
-    "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["app"],
+  "include": ["app", "renderer"],
   "exclude": ["node_modules"]
 }

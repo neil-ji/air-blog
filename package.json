@@ -7,7 +7,10 @@
     "prepare": "husky",
     "lint": "eslint --fix .",
     "format": "prettier --write .",
-    "build": "webpack --config webpack.config.ts --mode production"
+    "build": "webpack --config webpack.config.ts --mode production",
+    "build:dev": "webpack --config webpack.config.ts --mode development",
+    "ssg": "node ./.public/ssg.js",
+    "ssr": "node ./.public/ssr.js"
   },
   "engines": {
     "node": ">=21.6.1",
@@ -31,7 +34,11 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.4.0",
+    "@types/express": "^5.0.0",
     "@types/node": "^20.12.12",
+    "@types/react-dom": "^18.3.0",
+    "@types/sanitize-html": "^2.13.0",
+    "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.56.0",
     "globals": "^15.3.0",
     "husky": "^9.0.11",
@@ -47,7 +54,10 @@
   "dependencies": {
     "@types/react": "^18.3.11",
     "blog-analyzer": "^0.0.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "express": "^4.21.0",
+    "marked": "^14.1.2",
+    "react": "^19.0.0-rc-1460d67c-20241003",
+    "react-dom": "^19.0.0-rc-1460d67c-20241003",
+    "sanitize-html": "^2.13.1"
   }
 }
